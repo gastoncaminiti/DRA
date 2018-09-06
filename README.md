@@ -3,6 +3,6 @@ D.R.A – Drones de Rescate Ambiental D.R.A es un proyecto de videojuego desarro
 Proyecto desarrollado en Godot Engine 3
 
 # Grupo de Trabajo
--Esp. Rolón Esteban 
--ASC. Martinez Alejandra
--Caminiti Gastón Alberto
+- Esp. Rolón Esteban. 
+- ASC. Martinez Alejandra.
+- Caminiti Gastón Alberto.
