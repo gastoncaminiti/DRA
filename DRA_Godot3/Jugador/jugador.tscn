@@ -1,0 +1,49 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://Jugador/Drones/Modelo 00/Drone_00.png" type="Texture" id=1]
+[ext_resource path="res://Jugador/Drones/Modelo 00/Drone_02.png" type="Texture" id=2]
+[ext_resource path="res://Jugador/Drones/Modelo 00/Drone_01.png" type="Texture" id=3]
+[ext_resource path="res://Jugador/Drones/Modelo 00/Drone_03.png" type="Texture" id=4]
+[ext_resource path="res://Jugador/Drones/Modelo 00/Drone_04.png" type="Texture" id=5]
+[ext_resource path="res://Jugador/Drones/Modelo 00/Drone_06.png" type="Texture" id=6]
+[ext_resource path="res://Jugador/Drones/Modelo 00/Drone_07.png" type="Texture" id=7]
+[ext_resource path="res://Jugador/Drones/Modelo 00/Drone_05.png" type="Texture" id=8]
+[ext_resource path="res://Jugador/Drones/Modelo 00/Drone_08.png" type="Texture" id=9]
+[ext_resource path="res://Jugador/Drones/Modelo 00/Drone_09.png" type="Texture" id=10]
+[ext_resource path="res://Jugador/Drones/Modelo 00/Drone_10.png" type="Texture" id=11]
+[ext_resource path="res://Jugador/Drones/Modelo 00/Drone_12.png" type="Texture" id=12]
+[ext_resource path="res://Jugador/Drones/Modelo 00/Drone_11.png" type="Texture" id=13]
+[ext_resource path="res://Jugador/Drones/Modelo 00/Drone_13.png" type="Texture" id=14]
+[ext_resource path="res://Jugador/Drones/Modelo 00/Drone_14.png" type="Texture" id=15]
+[ext_resource path="res://Jugador/Drones/Modelo 00/Drone_15.png" type="Texture" id=16]
+
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "fly_00",
+"speed": 20.0
+} ]
+
+[node name="jugador" type="KinematicBody2D" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="." index="0"]
+
+frames = SubResource( 1 )
+animation = "fly_00"
+frame = 4
+playing = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="1"]
+
+position = Vector2( -1.0281, 0 )
+build_mode = 0
+polygon = PoolVector2Array( -20.1751, 3.5873, -7.76259, -4.80429, 13.9157, -4.97911, 26.8527, 2.01387, 29.6499, 9.00686, 29.3002, 19.1467, 18.6359, 25.0907, 12.6919, 29.2865, -7.76259, 29.2865, -20.1751, 19.6712 )
+
+
