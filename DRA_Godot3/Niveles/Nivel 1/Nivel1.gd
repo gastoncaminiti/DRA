@@ -1,12 +1,29 @@
+tool
+
 extends Node2D
+
+export(PackedScene) var Enemy
+export(PackedScene) var EnemyStats
+
+var EnemiesSize
+
+
 
 func _ready():
 	$jugador.position.y = $Chanel1.position.y
-	$Enjambre/Label.text = "1"
-	$Enjambre2/Label.text = "2"
-	$Enjambre3/Label.text = "3"
-	$Enjambre4/Label.text = "4"
-	$Enjambre5/Label.text = "5"
+	# Cargamos la informacion de los enemigos del archivo de operaciones correspondiente al nivel.
+	var file = File.new()
+	file.open("res://Operaciones/nivel1.txt", File.READ)
+	var enemies_data = file.get_csv_line()
+	file.close()
+	# Creamos los enemigos en el nivel.
+	EnemiesSize = enemies_data.size()
+	for index in range(EnemiesSize):
+		var e = Enemy.instance()
+		e.start($Chanel1,enemies_data[index])
+		e.position.x += 200 * index
+		add_child(e)
+	
 
 func _process(delta):
 	if(Input.is_action_pressed("Num1")):

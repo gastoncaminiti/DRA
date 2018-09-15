@@ -26,7 +26,9 @@ animations = [ {
 "speed": 20.0
 } ]
 
-[node name="jugador" type="KinematicBody2D" index="0"]
+[node name="jugador" type="KinematicBody2D" index="0" groups=[
+"drone",
+]]
 
 input_pickable = false
 collision_layer = 1
