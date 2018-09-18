@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Niveles/Nivel 1/Nivel1.gd" type="Script" id=1]
 [ext_resource path="res://Enemigos/Dengue/Enjambre/Enjambre.tscn" type="PackedScene" id=2]
@@ -9,11 +9,13 @@
 [ext_resource path="res://HUB/Paneles/PanelDerecho.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Control/Control.tscn" type="PackedScene" id=8]
 [ext_resource path="res://HUB/Paneles/PanelResultado.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Operaciones/Generador.tscn" type="PackedScene" id=10]
 
 [node name="Nivel1" type="Node2D" index="0"]
 
+position = Vector2( 10, 0 )
 script = ExtResource( 1 )
-_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+_sections_unfolded = [ "Material", "Transform" ]
 Enemy = ExtResource( 2 )
 EnemyStats = ExtResource( 3 )
 
@@ -42,11 +44,13 @@ texture = ExtResource( 4 )
 
 [node name="jugador" parent="." index="2" instance=ExtResource( 5 )]
 
-position = Vector2( -547.168, 171.248 )
+position = Vector2( -553.853, 221.353 )
+scale = Vector2( 0.8, 0.8 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="Camera2D" type="Camera2D" parent="." index="3"]
 
-offset = Vector2( 0, 60 )
+offset = Vector2( 0, 90 )
 anchor_mode = 1
 rotating = false
 current = true
@@ -72,47 +76,55 @@ editor_draw_drag_margin = false
 
 [node name="PanelIzquierdo" parent="." index="4" instance=ExtResource( 6 )]
 
-position = Vector2( -485.55, 412.152 )
+position = Vector2( -489.631, 424.395 )
 scale = Vector2( 0.5, 0.5 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="PanelDerecho" parent="." index="5" instance=ExtResource( 7 )]
 
-position = Vector2( 484.901, 396.317 )
+position = Vector2( 449.09, 424.663 )
 scale = Vector2( 0.5, 0.5 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Control" parent="." index="6" instance=ExtResource( 8 )]
 
-position = Vector2( 3.61102, 366.188 )
+position = Vector2( -13.2182, 395.864 )
 scale = Vector2( 0.7, 0.7 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="PanelResultado" parent="." index="7" instance=ExtResource( 9 )]
 
-position = Vector2( 221.658, 395.179 )
+position = Vector2( 203.053, 426.428 )
 scale = Vector2( 0.6, 0.6 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Chanel1" type="Position2D" parent="." index="8"]
+[node name="Generador" parent="." index="8" instance=ExtResource( 10 )]
 
-position = Vector2( 689.987, 171.248 )
+position = Vector2( 671.674, 150 )
+scale = Vector2( 0.876837, 1 )
+_sections_unfolded = [ "Transform" ]
+min_n = 1.0
+max_n = 10.0
 
-[node name="Chanel2" type="Position2D" parent="." index="9"]
+[node name="Generador2" parent="." index="9" instance=ExtResource( 10 )]
 
-position = Vector2( 691.983, 84.4314 )
+position = Vector2( 671.95, 0 )
+_sections_unfolded = [ "Transform" ]
+min_n = 11.0
+max_n = 20.0
 
-[node name="Chanel3" type="Position2D" parent="." index="10"]
+[node name="Generador3" parent="." index="10" instance=ExtResource( 10 )]
 
-position = Vector2( 691.657, -28.0885 )
+position = Vector2( 669.334, -150 )
+_sections_unfolded = [ "Transform" ]
+min_n = 21.0
+max_n = 30.0
 
-[node name="Chanel4" type="Position2D" parent="." index="11"]
+[node name="Generador4" parent="." index="11" instance=ExtResource( 10 )]
 
-position = Vector2( 687.991, -155.519 )
-
-[node name="Chanel5" type="Position2D" parent="." index="12"]
-
-position = Vector2( 690.595, -288.244 )
-scale = Vector2( 0.926401, 1 )
+position = Vector2( 664.902, -300 )
+_sections_unfolded = [ "Transform" ]
+min_n = 31.0
+max_n = 40.0
 
 

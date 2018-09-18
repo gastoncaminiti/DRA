@@ -5,7 +5,7 @@
 [ext_resource path="res://Enemigos/Dengue/Enjambre/Enjambre_1.png" type="Texture" id=3]
 [ext_resource path="res://Enemigos/Dengue/Enjambre/Enjambre_2.png" type="Texture" id=4]
 [ext_resource path="res://Enemigos/Dengue/Enjambre/Enjambre_3.png" type="Texture" id=5]
-[ext_resource path="res://HUB/cdnumbers.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://HUB/FontHUB.ttf" type="DynamicFontData" id=6]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -24,13 +24,15 @@ height = 20.0
 
 [sub_resource type="DynamicFont" id=3]
 
-size = 20
+size = 25
 use_mipmaps = false
-use_filter = true
+use_filter = false
 font_data = ExtResource( 6 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="Enjambre" type="KinematicBody2D" index="0"]
+[node name="Enjambre" type="KinematicBody2D" index="0" groups=[
+"enemigo",
+]]
 
 input_pickable = false
 collision_layer = 1
@@ -43,7 +45,7 @@ speed = 200
 
 frames = SubResource( 1 )
 animation = "fly"
-frame = 2
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]

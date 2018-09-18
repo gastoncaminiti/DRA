@@ -1,96 +1,100 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
-[ext_resource path="res://Control/BaseControl.png" type="Texture" id=1]
-[ext_resource path="res://Control/Numeros_1.png" type="Texture" id=2]
-[ext_resource path="res://Control/Numeros_2.png" type="Texture" id=3]
-[ext_resource path="res://Control/Numeros_3.png" type="Texture" id=4]
-[ext_resource path="res://Control/Numeros_4.png" type="Texture" id=5]
-[ext_resource path="res://Control/Numeros_5.png" type="Texture" id=6]
-[ext_resource path="res://Control/Numeros_6.png" type="Texture" id=7]
-[ext_resource path="res://Control/Numeros_7.png" type="Texture" id=8]
-[ext_resource path="res://Control/Numeros_8.png" type="Texture" id=9]
-[ext_resource path="res://Control/Numeros_9.png" type="Texture" id=10]
-[ext_resource path="res://Control/Operaciones_0.png" type="Texture" id=11]
-[ext_resource path="res://Control/Operaciones_1.png" type="Texture" id=12]
-[ext_resource path="res://Control/Operaciones_2.png" type="Texture" id=13]
-[ext_resource path="res://Control/Modos_0.png" type="Texture" id=14]
-[ext_resource path="res://Control/Modos_1.png" type="Texture" id=15]
+[ext_resource path="res://Control/Control.gd" type="Script" id=1]
+[ext_resource path="res://Control/BaseControl.png" type="Texture" id=2]
+[ext_resource path="res://Control/Numeros_1.png" type="Texture" id=3]
+[ext_resource path="res://Control/Numeros_2.png" type="Texture" id=4]
+[ext_resource path="res://Control/Numeros_3.png" type="Texture" id=5]
+[ext_resource path="res://Control/Numeros_4.png" type="Texture" id=6]
+[ext_resource path="res://Control/Numeros_5.png" type="Texture" id=7]
+[ext_resource path="res://Control/Numeros_6.png" type="Texture" id=8]
+[ext_resource path="res://Control/Numeros_7.png" type="Texture" id=9]
+[ext_resource path="res://Control/Numeros_8.png" type="Texture" id=10]
+[ext_resource path="res://Control/Numeros_9.png" type="Texture" id=11]
+[ext_resource path="res://Control/Operaciones_0.png" type="Texture" id=12]
+[ext_resource path="res://Control/Operaciones_1.png" type="Texture" id=13]
+[ext_resource path="res://Control/Operaciones_2.png" type="Texture" id=14]
+[ext_resource path="res://Control/Modos_0.png" type="Texture" id=15]
+[ext_resource path="res://Control/Modos_1.png" type="Texture" id=16]
 
 [node name="Control" type="Node2D" index="0"]
+
+script = ExtResource( 1 )
+isCoorMode = true
 
 [node name="Base" type="Sprite" parent="." index="0"]
 
 position = Vector2( -3.24213, -5.94395 )
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 
 [node name="Numeros_1" type="Sprite" parent="." index="1"]
 
 position = Vector2( -57.6298, 10.1577 )
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 
 [node name="Numeros_2" type="Sprite" parent="." index="2"]
 
 position = Vector2( -57.9841, 61.9515 )
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="Numeros_3" type="Sprite" parent="." index="3"]
 
 position = Vector2( -57.6858, 113.826 )
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="Numeros_4" type="Sprite" parent="." index="4"]
 
 position = Vector2( 4.13266, 10.5366 )
-texture = ExtResource( 5 )
+texture = ExtResource( 6 )
 
 [node name="Numeros_5" type="Sprite" parent="." index="5"]
 
 position = Vector2( 4.15733, 61.9515 )
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 
 [node name="Numeros_6" type="Sprite" parent="." index="6"]
 
 position = Vector2( 4.45553, 113.907 )
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 
 [node name="Numeros_7" type="Sprite" parent="." index="7"]
 
 position = Vector2( 65.4354, 10.9156 )
-texture = ExtResource( 8 )
+texture = ExtResource( 9 )
 
 [node name="Numeros_8" type="Sprite" parent="." index="8"]
 
 position = Vector2( 65.3794, 62.0322 )
-texture = ExtResource( 9 )
+texture = ExtResource( 10 )
 
 [node name="Numeros_9" type="Sprite" parent="." index="9"]
 
 position = Vector2( 65.1372, 113.987 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Operaciones_0" type="Sprite" parent="." index="10"]
 
 position = Vector2( 149.57, 3.51197 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Operaciones_1" type="Sprite" parent="." index="11"]
 
 position = Vector2( 150.03, 55.3865 )
-texture = ExtResource( 12 )
+texture = ExtResource( 13 )
 
 [node name="Operaciones_2" type="Sprite" parent="." index="12"]
 
 position = Vector2( 149.57, 106.801 )
-texture = ExtResource( 13 )
+texture = ExtResource( 14 )
 
 [node name="Modos_0" type="Sprite" parent="." index="13"]
 
 position = Vector2( -151.305, 34.4739 )
-texture = ExtResource( 14 )
+texture = ExtResource( 15 )
 
 [node name="Modos_1" type="Sprite" parent="." index="14"]
 
 position = Vector2( -151.224, 87.2677 )
-texture = ExtResource( 15 )
+texture = ExtResource( 16 )
 
 
